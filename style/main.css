@@ -1,0 +1,65 @@
+.img-left,.img-rigth{
+
+    background-image: url(../image.png);
+
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    
+
+}
+.img-rigth{
+    background-image: url(../second.png);
+}
+@media (max-width: 568px){
+    .img-left,.img-rigth{
+           height:240px;
+    }
+}
+@media (min-width: 768px){
+    .img-left,.img-rigth{
+           height: 360px;
+    }
+}
+@media (min-width: 992px){
+    .img-left,.img-rigth{
+           height: 450px;
+    }
+}
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color:rrgb(58, 186, 249);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:rgb(58, 186, 249);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+.scrolling-text {  
+    white-space: nowrap;  
+    overflow: hidden;  
+    position: relative;  
+    width: 100%; /* Ensure it fills the container width */  
+}  
+
+.scrolling-text h1 {  
+    display: inline-block;  
+    animation: scroll-left 12s linear infinite; /* Keep infinity, but can be modified */  
+}  
+
+@keyframes scroll-left {  
+    0% {  
+        transform: translateX(100%); /* Start completely off the right */  
+    }  
+    100% {  
+        transform: translateX(-100%); /* End completely off the left */  
+    }  
+}
